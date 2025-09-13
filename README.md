@@ -22,10 +22,10 @@ Machine learning models can perpetuate and amplify existing biases present in tr
 
 ```
 ├── notebooks/
-├── fairlearn_bias_mitigation.ipynb    # Fairlearn implementation examples
-├── aif360_bias_mitigation.ipynb       # AIF360 implementation examples
+├── fairlearn_loan_example.ipynb       # Fairlearn implementation examples
+├── aif_360_example.ipynb              # AIF360 implementation examples
 │── data/                              # Sample datasets
-├── requirements.txt                   # Python dependencies
+├── requirements.txt                   # Python dependencies and packages
 ├── README.md                          # This file
 └── LICENSE                            # MIT License
 ```
@@ -41,8 +41,8 @@ Machine learning models can perpetuate and amplify existing biases present in tr
 
 1. **Clone the repository**
    ```bash
-   git clone https://github.com/yourusername/ai-bias-mitigation-workshop.git
-   cd ai-bias-mitigation-workshop
+   git clone https://github.com/dpaq-lab/bwd.git
+   cd bwd
    ```
 
 2. **Create virtual environment** (recommended)
@@ -63,14 +63,13 @@ Machine learning models can perpetuate and amplify existing biases present in tr
 
 ## Notebooks Overview
 
-### 1. Fairlearn Bias Mitigation (`fairlearn_resume_example.ipynb`)
+### 1. Fairlearn Bias Mitigation (`fairlearn_loan_example.ipynb`)
 
 **Microsoft's Fairlearn Library Implementation**
 
-- **Focus**: Hiring bias detection and mitigation
+- **Focus**: Loan approval bias detection and mitigation
 - **Techniques Covered**:
   - Demographic Parity
-  - Equalized Odds
   - Post-processing with Threshold Optimization
 - **Key Features**:
   - Interactive fairness-accuracy trade-off visualizations
@@ -78,9 +77,7 @@ Machine learning models can perpetuate and amplify existing biases present in tr
   - Easy integration with scikit-learn
 
 **Fairness Methods Demonstrated**:
--  **Exponentiated Gradient** - In-processing constraint optimization
 -  **Threshold Optimizer** - Post-processing threshold adjustment
--  **Reductions Approach** - Converting fairness problems to cost-sensitive learning
 
 ### 2. AIF360 Bias Mitigation (`aif_360_example.ipynb`)
 
@@ -96,19 +93,11 @@ Machine learning models can perpetuate and amplify existing biases present in tr
   - Bias detection algorithms
   - Explainability tools
 
-**Fairness Methods Demonstrated**:
-- **Pre-processing**: Data transformation before training
-- **In-processing**: Fairness-aware learning algorithms
-- **Post-processing**: Outcome adjustment after prediction
-
 ## Key Fairness Concepts Covered
 
 | Fairness Criterion | Description | When to Use |
 |-------------------|-------------|-------------|
 | **Demographic Parity** | Equal positive prediction rates across groups | Legal compliance, equal representation goals |
-| **Equalized Odds** | Equal TPR and FPR across groups | Merit-based decisions with fairness |
-| **Equal Opportunity** | Equal TPR across groups | When false negatives are more costly |
-| **Calibration** | Equal positive predictive value across groups | When prediction confidence matters |
 
 ## Libraries Used
 
@@ -130,9 +119,8 @@ Machine learning models can perpetuate and amplify existing biases present in tr
 
 ## Sample Datasets
 
-- **Synthetic Hiring Dataset** - Demonstrates employment bias scenarios
+- **Synthetic Loan Dataset** - Demonstrates loan bias scenarios
 - **Adult Income Dataset** - Census data for income prediction
-- **Custom generated data** - Controlled bias scenarios for learning
 
 ## Acknowledgments
 
@@ -140,12 +128,9 @@ Machine learning models can perpetuate and amplify existing biases present in tr
 - **IBM Research** for the comprehensive AIF360 library
 - **Black Women in Data organizers** for promoting responsible AI practices
 
-
 ---
 
-### Star this repository if you found it helpful!
-
-**Together, we can build more fair and equitable AI systems.** 🚀
+### Star this repository if you found it helpful.
 
 ---
 
